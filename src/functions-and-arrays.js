@@ -1,19 +1,61 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers() {
+let num1;
+let num2;
 
+if (num1<num2){
+  console.log (num1);
+} else if (num1>num2){
+  console.log (num2);
+} else (num1===num2){
+  console.log(num1);
+}
+}
+/*comparar num1<num2 
+En caso de que num1 sea superior a num2 >console.log (num1)
+en caso de que num2 sea sueprior a num1> console.log (num2)
+en caso de que sean el mismo numero> console.log num1
+
+no habria una manera de hacerlo con un swich?
+
+algo tipus 
+
+switch (num1>num2){
+  case true:
+  console.log (num2);
+  break;
+  case false:
+    console.log(num1);
+    break;
+  default: //mateix numero?
+}
+*/
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+function findLongestWord() {
+  for(let i=0; i<words.length; i++) {
 
+  }
+}
+
+/*fer un .lenght de cada un dels elements d'array, pero això només em determina l'ordre del array, no les paraules en si...
+comparar el resultat (numero) entre si i treure el major numero.
+*/
 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers() {
+  let sum=0;
+  for (let i=0; i<numbers.length; i++){ 
+    sum+= numbers[i];
+     }
+      return [sum];
+  }
 
 
 
