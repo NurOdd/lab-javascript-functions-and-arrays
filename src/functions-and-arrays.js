@@ -4,13 +4,14 @@ let num1;
 let num2;
 
 if (num1<num2){
-  console.log (num1);
+  return num1;
 } else if (num1>num2){
-  console.log (num2);
-} else (num1===num2){
-  console.log(num1);
+  return num2;
+} else if (num1===num2){
+return num1;
 }
 }
+
 /*comparar num1<num2 
 En caso de que num1 sea superior a num2 >console.log (num1)
 en caso de que num2 sea sueprior a num1> console.log (num2)
@@ -29,6 +30,14 @@ switch (num1>num2){
     break;
   default: //mateix numero?
 }
+
+També he vist que es pot fer millor amb:
+const max = (n1,n2) => {
+  if(n1>n2) return n1; 
+  return n2;
+}
+
+/*Peros segueix faltan el cas de que siguin el mateix numero
 */
 
 
@@ -169,4 +178,4 @@ if (typeof module !== 'undefined') {
     howManyTimes,
     greatestProduct
   };
-}
+}}
