@@ -1,55 +1,70 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {
-let num1;
-let num2;
+function maxOfTwoNumbers(num1,num2) {
+      if(num1>num2) return num1; 
+    return num2;
+  
+}
+ /* amb switch
 
+let biggestnum =num1>num2
+
+  switch (biggestnum){
+
+    case true:
+      return num1;        
+     
+    case false: //false
+      return num2;
+      
+    default: 
+      return num1;
+      
+    
+  }
+}
+//scope
+
+
+/*
 if (num1<num2){
-  return num1;
-} else if (num1>num2){
   return num2;
-} else if (num1===num2){
+} else if (num1>num2){
+  return num1;
+} else {
 return num1;
 }
 }
 
-/*comparar num1<num2 
-En caso de que num1 sea superior a num2 >console.log (num1)
-en caso de que num2 sea sueprior a num1> console.log (num2)
-en caso de que sean el mismo numero> console.log num1
+console.log(maxOfTwoNumbers())*/
 
-no habria una manera de hacerlo con un swich?
-
-algo tipus 
-
-switch (num1>num2){
-  case true:
-  console.log (num2);
-  break;
-  case false:
-    console.log(num1);
-    break;
-  default: //mateix numero?
-}
-
-També he vist que es pot fer millor amb:
+/*
+També he vist que es pot fer millor amb: 
 const max = (n1,n2) => {
   if(n1>n2) return n1; 
   return n2;
 }
-
-/*Peros segueix faltan el cas de que siguin el mateix numero
 */
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {
-  for(let i=0; i<words.length; i++) {
+function findLongestWord(arr) {
+  if (arr.length===0) return null; 
 
+  let longestWord = arr[0];
+  
+  for(let i=1; i<arr.length; i++) {
+    if(arr[i].length>longestWord.length){
+      longestWord=arr[i];}
+
+    }
+    return longestWord;
   }
-}
 
+
+console.log (findLongestWord([]))
+ /*mirar el numero de lletres (.lenght) d'un array, en cas de que sigui més alt que el
 /*fer un .lenght de cada un dels elements d'array, pero això només em determina l'ordre del array, no les paraules en si...
 comparar el resultat (numero) entre si i treure el major numero.
 */
@@ -58,12 +73,14 @@ comparar el resultat (numero) entre si i treure el major numero.
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {
+function sumNumbers(arr) {
   let sum=0;
-  for (let i=0; i<numbers.length; i++){ 
-    sum+= numbers[i];
+  for (let i=0; i<arr.length; i++){ 
+    sum+= arr[i];
      }
-      return [sum];
+     return sum;
+     console.log(sum);
+      
   }
 
 
@@ -178,4 +195,4 @@ if (typeof module !== 'undefined') {
     howManyTimes,
     greatestProduct
   };
-}}
+}
