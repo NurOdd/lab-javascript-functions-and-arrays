@@ -87,22 +87,24 @@ function sumNumbers(arr) {
 
 // Iteration #3.1 Bonus:
 function sum(arr) {
-  let sum=0;
-  for(let i=0; i<arr.length; i++){
-    const element= arr[i];
-    switch (typeof element){
+    let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+   const element = arr[i];
+    switch (typeof element) {
       case 'number':
-      sum+=element;
-      break;
+        sum += element;
+        break;
       case 'string':
-        sum+= element.length;
+        sum += element.length;
+        break;
       case 'boolean':
         if(element) sum += 1;
         break;
-        default:
-          throw new Error ('Unsupported data type sir or madam')
+      default:
+          throw new Error ("Unsupported data type")
     }
   }
+  return sum;
 }
 
 
@@ -114,18 +116,12 @@ const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 function averageNumbers(arr) {
   if(arr.length===0)return null;
   let sum=0;
-  for (let i =0;i<Array.length; i ++)
-    switch (typeof element){
-      case 'number':
-      sum+=element;
-      break;
-      case 'string':
-        sum+= element.length;
-      case 'boolean':
-        if(element) sum += 1;
-        break;
-        default:
-          throw new Error ('Unsupported data type sir or madam')
+  for (let i=0; i<arr.length; i++){ 
+    sum+= arr[i];
+     }
+     return (sum/arr.length);
+     console.log(sum);
+
 }
 
 
@@ -144,10 +140,25 @@ sum += element.length;
 
 // Bonus - Iteration #4.1
 function avg(arr) {
-
-
+if(arr.length===0) return null;
+let sum = 0;
+for (let i=0; i<arr.length; i++) {
+const element = arr[i];
+switch (typeof element) {
+  case 'number':
+    sum += element;
+    break;
+  case 'string':
+    sum += element.length;
+    break;
+  case 'boolean':
+    if(element) sum += 1;
+    break;
+  default:
+      throw new Error ("Unsupported data type")
 }
-return sum/arr.length
+}
+return sum/arr.length;
 }
 
 // Iteration #5: Unique arrays
@@ -204,12 +215,12 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes(array, seach) {
+function howManyTimes(arr, search) {
   let counter = 0;
-  for (let i=0; i=array.length; i++){
-    const element =array[i];
+  for (let i=0; i=arr.length; i++) {
+    const element = arr[i];
     if (element ===search)counter +=1;
-  }
+  } 
   return counter;
 }
 
